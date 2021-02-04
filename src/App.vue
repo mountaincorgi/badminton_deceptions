@@ -2,7 +2,6 @@
   <div id="app">
     <Sidebar id="sidebar" v-bind:filterOptions="filterOptions" />
     <Table id="table" v-bind:tableData="filteredDeceptionData" />
-    <p>{{filterOptions}}</p>
   </div>
 </template>
 
@@ -77,17 +76,17 @@ export default {
 }
 #sidebar {
   height: 100%;
-  width: 200px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: beige;
   padding-top: 45px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 #table {
-  margin-left: 250px;
+  margin-left: 370px;
   padding-top: 40px;
 }
 </style>
