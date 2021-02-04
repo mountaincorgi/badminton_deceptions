@@ -1,8 +1,10 @@
 <template>
     <div>
         <h1>{{category.name}}</h1>
-        <div v-bind:key="deception.id" v-for="deception in category.deceptions">
-            <Card v-bind:cardData="deception" />
+        <div id="table-category">
+            <div v-bind:key="deception.id" v-for="deception in category.deceptions">
+                <Card v-bind:cardData="deception" />
+            </div>
         </div>
     </div>
 </template>
@@ -20,5 +22,8 @@ export default {
 </script>
 
 <style scoped>
-
+#table-category {
+    display: flex;
+    flex-wrap: wrap;
+}
 </style>

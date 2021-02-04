@@ -34,6 +34,11 @@ export default {
           mid: true,
           back: true
         }
+      },
+      activePositions: {
+        playerPosition: null,
+        expectedPosition: null,
+        actualPosition: null
       }
     }
   },
@@ -73,17 +78,6 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-#sidebar {
-  height: 100%;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: beige;
-  padding-top: 45px;
-  padding-left: 40px;
 }
 #table {
   margin-left: 370px;

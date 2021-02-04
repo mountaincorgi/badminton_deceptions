@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <p>{{cardData}}</p>
+    <div id="card">
+        <h5>{{cardData.name}}</h5>
+        <p>This is a short description of the technique.</p>
     </div>
 </template>
 
@@ -12,5 +13,12 @@ export default {
 </script>
 
 <style scoped>
-
+#card {
+    width: 200px;
+    height: 300px;
+    word-wrap: break-word;
+    margin: 20px;
+    padding: 10px;
+    background-color: blanchedalmond;
+}
 </style>
