@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Sidebar id="sidebar" :filterOptions="filterOptions" :activePositions="activePositions" />
-    <Table id="table" :tableData="filteredDeceptionData" @change-active-positions="changeActivePositions" />
+    <Sidebar id="sidebar" :filterOptions="filterOptions" />
+    <Table id="table" :tableData="filteredDeceptionData" />
   </div>
 </template>
 
@@ -34,11 +34,6 @@ export default {
           mid: true,
           back: true
         }
-      },
-      activePositions: {
-        fromPosition: null,
-        expectedPosition: null,
-        actualPosition: null
       }
     }
   },
@@ -69,16 +64,7 @@ export default {
       }
       return filteredData;
     }  // filteredDeceptionData 
-  },  // computed
-  methods: {
-    changeActivePositions(positions) {
-      console.log("App positions before: " + this.activePositions);
-      console.log("App positions to update: " + positions);
-      this.activePositions = positions;
-      console.log("App positions after: " + this.activePositions);
-
-    }
-  }
+  }  // computed
 }
 </script>
 

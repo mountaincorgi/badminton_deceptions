@@ -1,7 +1,7 @@
 <template>
     <div id="sidebar">
         <p>Sidebar</p>
-        <p>{{activePositions}}</p>
+        <div><strong><span class="left">LEFT</span> | <span class="right">RIGHT</span></strong></div>
         <Court />
         <Filters :filterOptions="filterOptions" />
     </div>
@@ -17,7 +17,7 @@ export default {
         Court,
         Filters
     },
-    props: ["filterOptions", "activePositions"]
+    props: ["filterOptions"]
 }
 </script>
 
@@ -39,5 +39,13 @@ export default {
 }
 #sidebar::-webkit-scrollbar {
   display: none;
+}
+.left:hover {
+    color: red;
+    cursor: pointer;
+}
+.right:hover {
+    color: blue;
+    cursor: pointer;
 }
 </style>

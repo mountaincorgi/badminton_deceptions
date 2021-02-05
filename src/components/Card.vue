@@ -1,18 +1,17 @@
 <template>
     <div id="card" @mouseover="changeActivePositions(positions)">
         <h5>{{cardData.name}}</h5>
-        <p>This is a short description of the technique.</p>
+        <p>Grip: {{cardData.grip}}</p>
+        <p>Position: {{cardData.category}}</p>
+        <p>Type: Hold</p>
     </div>
 </template>
 
 <script>
+import { store } from '../store.js'
+
 export default {
     name: "Card",
-    data() {
-        return {
-            count: 1
-        }
-    },
     props: ["cardData"],
     computed: {
         positions: function() {
@@ -25,8 +24,7 @@ export default {
     },
     methods: {
         changeActivePositions: function(positions) {
-            console.log("Card positions: " + positions);
-            this.$emit("change-active-positions", positions);
+            store.changeActivePositions(positions);
         }
     }
 }
