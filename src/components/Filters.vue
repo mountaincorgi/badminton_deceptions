@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Filters</h1>
+        <p>Filters</p>
         <h3>Position</h3>
             <input type="checkbox" id="net" name="net" value="net" v-model="computedFilterOptions.positionOptions.net">
             <label for="net"> Net</label><br>

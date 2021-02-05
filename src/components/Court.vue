@@ -1,14 +1,17 @@
 <template>
     <div>
-        <h1>Court</h1>
+        <p>Court</p>
         <div id="court-container">
-            <img 
+            <svg
                 id="court-svg"
-                src="../assets/court_path_y.svg"
-                alt="court"
-                height="440"
-                width="200"
-                style="stroke: white;">
+                xmlns="http://www.w3.org/2000/svg"
+                width="619.987"
+                height="1347.278"
+                viewBox="0 0 164.038 356.467">
+                <g stroke-width="3.8">
+                    <path d="M82.02 125.876V2.467M14.53 178.793V1.64m134.98 177.154V1.64m13.154 22.01H2.432m160.232 102.194H2.432m159.706 52.424H1.9V1.9h160.238v176.367zM82.02 230.591V354m67.49-176.326V354.83M14.529 177.674V354.83M1.374 332.817h160.232M1.374 230.625h160.232M1.9 178.2h160.238v176.367H1.9V178.2z" fill="none"/>
+                </g>
+            </svg>
 
             <div id="court">
                 <div class="OL8 gi"></div>
@@ -58,24 +61,34 @@ export default {
 
 <style scoped>
 #court-container {
-    height: 440px;
-    width: 200px;
+    height: 480px;
+    width: 240px;
+    background-color: rgb(33, 161, 118);
+    border-radius: 20px;
 }
 #court-svg {
     position: absolute;
-    z-index: -1;
+    height: 440px;
+    width: 200px;
+    stroke: white;
+    padding: 20px;
 }
 #court {
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: 3fr 3fr 2fr 1fr 1fr 2fr 3fr 3fr;
-    height: 440px;
-    width: 200px;
+    height: 436px;
+    width: 196px;
     position: absolute;
     z-index: 10;
+    padding: 20px;
+    grid-gap: 2px;
+}
+.gi {
+    background-color: white;
+    opacity: 0.2;
 }
 .gi:hover {
-    background-color: red;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 </style>

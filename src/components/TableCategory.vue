@@ -2,8 +2,8 @@
     <div>
         <h1>{{category.name}}</h1>
         <div id="table-category">
-            <div v-bind:key="deception.id" v-for="deception in category.deceptions">
-                <Card v-bind:cardData="deception" />
+            <div :key="deception.id" v-for="deception in category.deceptions">
+                <Card :cardData="deception" @change-active-positions="changeActivePositions($event)" />
             </div>
         </div>
     </div>
@@ -17,7 +17,13 @@ export default {
     components: {
         Card
     },
-    props: ["category"]
+    props: ["category"],
+    methods: {
+        changeActivePositions: function(positions) {
+            console.log("ategory positions: " + positions);
+            this.$emit("change-active-positions", positions);
+        }
+    }
 }
 </script>
 

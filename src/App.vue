@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Sidebar id="sidebar" v-bind:filterOptions="filterOptions" />
-    <Table id="table" v-bind:tableData="filteredDeceptionData" />
+    <Sidebar id="sidebar" :filterOptions="filterOptions" :activePositions="activePositions" />
+    <Table id="table" :tableData="filteredDeceptionData" @change-active-positions="changeActivePositions" />
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
         }
       },
       activePositions: {
-        playerPosition: null,
+        fromPosition: null,
         expectedPosition: null,
         actualPosition: null
       }
@@ -69,7 +69,16 @@ export default {
       }
       return filteredData;
     }  // filteredDeceptionData 
-  }  // computed
+  },  // computed
+  methods: {
+    changeActivePositions(positions) {
+      console.log("App positions before: " + this.activePositions);
+      console.log("App positions to update: " + positions);
+      this.activePositions = positions;
+      console.log("App positions after: " + this.activePositions);
+
+    }
+  }
 }
 </script>
 

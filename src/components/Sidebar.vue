@@ -1,8 +1,9 @@
 <template>
     <div id="sidebar">
-        <h1>Sidebar</h1>
+        <p>Sidebar</p>
+        <p>{{activePositions}}</p>
         <Court />
-        <Filters v-bind:filterOptions="filterOptions" />
+        <Filters :filterOptions="filterOptions" />
     </div>
 </template>
 
@@ -16,13 +17,12 @@ export default {
         Court,
         Filters
     },
-    props: ["filterOptions"]
+    props: ["filterOptions", "activePositions"]
 }
 </script>
 
 <style scoped>
 #sidebar {
-  height: 100%;
   width: 300px;
   position: fixed;
   z-index: 1;
@@ -31,6 +31,7 @@ export default {
   left: 0;
   background-color: beige;
   padding-top: 45px;
+  padding-bottom: 100px;
   padding-left: 40px;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
