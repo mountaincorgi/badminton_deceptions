@@ -2,7 +2,8 @@
 node_modules
 /dist
 report.*
-deceptionData.json
+deceptionDataLeft.json
+deceptionDataRight.json
 
 
 # local env files

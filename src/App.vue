@@ -18,7 +18,8 @@ import Sidebar from './components/Sidebar.vue';
 import Table from './components/Table.vue';
 
 // load json data from external file
-import json from './deceptionData.json' 
+import jsonLeft from './deceptionDataLeft.json' 
+import jsonRight from './deceptionDataRight.json' 
 
 export default {
   name: 'App',
@@ -28,7 +29,8 @@ export default {
   },
   data() {
     return {
-      deceptionData: json,
+      deceptionDataL: jsonLeft,
+      deceptionDataR: jsonRight,
       handedness: "R",
       filterOptions: {
         gripOptions: {
@@ -44,42 +46,61 @@ export default {
       }
     }
   },
-  computed: {
-    filteredDeceptionData: function() {
-      let filteredData = {
-        categories: []
-      }
-      // add each category to filteredData if filter is true
-      for (let c_id in this.deceptionData.categories) {
-        let c = this.deceptionData.categories[c_id];
-
-        if (this.filterOptions.positionOptions[c.name] == true) {
-          let filteredCategory = {name: c.name, id: c.id, deceptions: []};
-
-          // add each deception to filteredData if filter is true
-          for (let d_id in c.deceptions) {
-            let d = c.deceptions[d_id];
-            if (this.filterOptions.gripOptions[d.grip] == true) {
-              // FILTER BY HANDEDNESS!!!
-              filteredCategory.deceptions.push(d);
-            }
-          }
-          // only add the category if it contains 1 or more items
-          if (filteredCategory.deceptions.length >= 1) {
-            filteredData.categories.push(filteredCategory);
-          }
-        }
-      }
-      return filteredData;
-    }  // filteredDeceptionData 
-  },  // computed
   methods: {
     changeHandedness: function(newHandedness) {
       if (this.handedness !== newHandedness) {
         this.handedness = newHandedness;
       } 
-    }
-  }
+    },
+    getDeceptionDataByHandedness: function() {
+      if (this.handedness === "L") {
+        return this.deceptionDataL;
+      } else {
+        return this.deceptionDataR;
+      }
+    },
+    filterByPosition: function(data) {
+      return data.filter(d => this.selectedCategories.includes(d.category));
+    },
+    filterByGrip: function(data) {
+      return data.filter(d => this.selectedGrips.includes(d.grip));
+    } 
+  },
+  computed: {
+    selectedCategories: function() {
+      return ["net", "front", "mid", "back"].filter(
+        c => this.filterOptions.positionOptions[c] === true
+      );
+    },
+    selectedGrips: function() {
+      return ["forehand", "backhand"].filter(
+        g => this.filterOptions.gripOptions[g] === true
+      );
+    },
+    filteredDeceptionData: function() {
+      let d1 = this.getDeceptionDataByHandedness().deceptions;
+      let d2 = this.filterByPosition(d1);
+      let d3 = this.filterByGrip(d2);
+      let selectedCategories = this.selectedCategories;
+
+      // build filtered data object
+      let filteredData = {categories: []};
+
+      // add each category to filteredData if filter is true
+      for (let i=0; i<selectedCategories.length; i++) {
+        let categoryName = selectedCategories[i];
+        let deceptions = d3.filter(d => d.category === categoryName);
+        if (deceptions.length !== 0) {
+          filteredData.categories.push({
+            id: i+1,
+            name: categoryName,
+            deceptions: deceptions
+          });
+        }
+      }
+      return filteredData;
+    }  // filteredDeceptionData 
+  }  // computed
 }
 </script>
 
