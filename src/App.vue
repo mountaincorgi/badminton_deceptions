@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <p class="stuff">Handedness: {{handedness}}</p>
-    <p class="test">{{activeCard}}</p>
+    <p class="test">active card: {{store.state.activeCard}}</p>
+    <p class="test">openModal: {{store.state.modalOpen}}</p>
     <CardModal id="modal" :isOpen="true" />
     <Sidebar
       id="sidebar"
@@ -35,7 +36,7 @@ export default {
   },
   data() {
     return {
-      activeCard: store.state.activeCard,
+      store: store,
       deceptionDataL: jsonLeft,
       deceptionDataR: jsonRight,
       handedness: "R",

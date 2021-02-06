@@ -33,6 +33,6 @@ export const store = {
         this.state.activeCard.actualPosition = newActiveCard.actualPosition;
     },
     toggleModal() {
-        this.state.modalOpen === true ? this.modalOpen = false : this.modalOpen = true;
+        this.state.modalOpen === true ? this.state.modalOpen = false : this.state.modalOpen = true;
     }
 }

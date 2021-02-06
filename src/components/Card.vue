@@ -30,6 +30,7 @@ export default {
         },
         changeActiveCard: function(activeCardData) {
             store.changeActiveCard(activeCardData);
+            store.toggleModal();
         }
     }
 }
