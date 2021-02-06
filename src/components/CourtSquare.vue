@@ -12,7 +12,7 @@ export default {
 <style scoped>
 .grid-item {
     background-color: white;
-    opacity: 0.05;
+    opacity: 0;
     border-radius: 100%;
 }
 .from {

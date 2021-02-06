@@ -1,9 +1,11 @@
 <template>
-    <div id="card" @mouseover="changeActivePositions(positions)">
+    <div
+        id="card"
+        @mouseover="changeActivePositions(positions)"
+        @click="changeActiveCard(cardData)">
         <h5>{{cardData.name}}</h5>
         <p>Grip: {{cardData.grip}}</p>
         <p>Position: {{cardData.category}}</p>
-        <p>Type: Hold</p>
     </div>
 </template>
 
@@ -25,6 +27,9 @@ export default {
     methods: {
         changeActivePositions: function(positions) {
             store.changeActivePositions(positions);
+        },
+        changeActiveCard: function(activeCardData) {
+            store.changeActiveCard(activeCardData);
         }
     }
 }

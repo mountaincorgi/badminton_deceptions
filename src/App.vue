@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <p class="stuff">Handedness: {{handedness}}</p>
+    <p class="test">{{activeCard}}</p>
+    <CardModal id="modal" :isOpen="true" />
     <Sidebar
       id="sidebar"
       :filterOptions="filterOptions"
@@ -16,6 +18,9 @@
 <script>
 import Sidebar from './components/Sidebar.vue';
 import Table from './components/Table.vue';
+import CardModal from './components/CardModal.vue'
+import { store } from './store.js';
+
 
 // load json data from external file
 import jsonLeft from './deceptionDataLeft.json' 
@@ -25,10 +30,12 @@ export default {
   name: 'App',
   components: {
     Sidebar,
-    Table
+    Table,
+    CardModal
   },
   data() {
     return {
+      activeCard: store.state.activeCard,
       deceptionDataL: jsonLeft,
       deceptionDataR: jsonRight,
       handedness: "R",
@@ -114,7 +121,14 @@ export default {
   margin-left: 370px;
   padding-top: 40px;
 }
+#modal {
+  margin-left: 370px;
+  padding-top: 40px;
+}
 .stuff {
+  margin-left: 400px;
+}
+.test {
   margin-left: 400px;
 }
 </style>

@@ -62,7 +62,6 @@ export default {
     components: {
         CourtSquare
     },
-    props: [],
     data() {
         return {
             activePositions: store.state.activePositions
