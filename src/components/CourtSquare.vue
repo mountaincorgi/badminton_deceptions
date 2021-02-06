@@ -4,8 +4,7 @@
         :class="{
             'from-position': isFrom,
             'expected-position': isExpected,
-            'actual-position': isActual
-        }">
+            'actual-position': isActual}">
     </div>
 </template>
 

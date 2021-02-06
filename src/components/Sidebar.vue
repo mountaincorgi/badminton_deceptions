@@ -1,7 +1,11 @@
 <template>
     <div id="sidebar">
         <p>Sidebar</p>
-        <div><strong><span class="left">LEFT</span> | <span class="right">RIGHT</span></strong></div>
+        <div class="handedness-buttons">
+            <strong>
+                <span class="left" @click="changeHandedness('L')">LEFT</span> | 
+                <span class="right" @click="changeHandedness('R')">RIGHT</span>
+            </strong></div>
         <Court />
         <Filters :filterOptions="filterOptions" />
     </div>
@@ -17,7 +21,12 @@ export default {
         Court,
         Filters
     },
-    props: ["filterOptions"]
+    props: ["filterOptions"],
+    methods: {
+        changeHandedness: function(newHandedness) {
+            this.$emit('change-handedness', newHandedness);
+        }
+    }
 }
 </script>
 

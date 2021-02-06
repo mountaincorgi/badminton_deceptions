@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <Sidebar id="sidebar" :filterOptions="filterOptions" />
-    <Table id="table" :tableData="filteredDeceptionData" />
+    <p class="stuff">Handedness: {{handedness}}</p>
+    <Sidebar
+      id="sidebar"
+      :filterOptions="filterOptions"
+      @change-handedness="changeHandedness"/>
+    <Table
+      id="table"
+      :tableData="filteredDeceptionData" />
   </div>
 </template>
 
@@ -23,6 +29,7 @@ export default {
   data() {
     return {
       deceptionData: json,
+      handedness: "R",
       filterOptions: {
         gripOptions: {
           forehand: true,
@@ -53,6 +60,7 @@ export default {
           for (let d_id in c.deceptions) {
             let d = c.deceptions[d_id];
             if (this.filterOptions.gripOptions[d.grip] == true) {
+              // FILTER BY HANDEDNESS!!!
               filteredCategory.deceptions.push(d);
             }
           }
@@ -64,7 +72,14 @@ export default {
       }
       return filteredData;
     }  // filteredDeceptionData 
-  }  // computed
+  },  // computed
+  methods: {
+    changeHandedness: function(newHandedness) {
+      if (this.handedness !== newHandedness) {
+        this.handedness = newHandedness;
+      } 
+    }
+  }
 }
 </script>
 
@@ -77,5 +92,8 @@ export default {
 #table {
   margin-left: 370px;
   padding-top: 40px;
+}
+.stuff {
+  margin-left: 400px;
 }
 </style>

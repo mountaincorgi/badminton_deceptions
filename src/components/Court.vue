@@ -15,6 +15,7 @@
             </svg>
 
             <div id="court">
+                <!-- DO NOT DO THIS GET FROM SOME KIND OF OBJECT INSTEAD THIS IS FUCKING DUMB -->
                 <CourtSquare
                     :isFrom="'OL8' === activePositions.fromPosition"
                     :isExpected="'OL8' === activePositions.expectedPosition"
