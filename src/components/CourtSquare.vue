@@ -1,17 +1,11 @@
 <template>
-    <div 
-        class="grid-item"
-        :class="{
-            'from-position': isFrom,
-            'expected-position': isExpected,
-            'actual-position': isActual}">
-    </div>
+    <div class="grid-item" :class="activeClass"></div>
 </template>
 
 <script>
 export default {
     name: "CourtSquare",
-    props: ["isFrom", "isExpected", "isActual"]
+    props: ["activeClass"]
 }
 </script>
 
@@ -21,15 +15,15 @@ export default {
     opacity: 0.05;
     border-radius: 100%;
 }
-.from-position {
+.from {
     background-color: cyan;
     opacity: 1;
 }
-.expected-position {
+.expected {
     background-color: yellow;
     opacity: 1;
 }
-.actual-position {
+.actual {
     background-color: red;
     opacity: 1;
 }
