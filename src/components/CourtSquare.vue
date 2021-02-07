@@ -16,15 +16,15 @@ export default {
     border-radius: 100%;
 }
 .from {
-    background-color: cyan;
+    background-color: rgb(150, 240, 240);
     opacity: 1;
 }
 .expected {
-    background-color: yellow;
+    background-color: rgb(240, 240, 150);
     opacity: 1;
 }
 .actual {
-    background-color: red;
+    background-color: rgb(240, 150, 240);
     opacity: 1;
 }
 </style>

@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <p class="stuff">Handedness: {{handedness}}</p>
-    <p class="stuff">Open: {{state.modalOpen}}</p>
-    <p class="stuff">Active: {{state.activeCard}}</p>
     <CardModal
       id="modal"
       :isOpen="state.modalOpen" 
@@ -120,6 +117,9 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+p {
+  font-size: 1rem;
 }
 #table {
   margin-left: 370px;

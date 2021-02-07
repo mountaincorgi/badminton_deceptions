@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="table">
         <p>Table</p>
         <div :key="category.id" v-for="category in tableData.categories">
             <TableCategory :category="category" />
@@ -20,5 +20,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

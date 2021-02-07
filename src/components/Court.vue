@@ -1,9 +1,12 @@
 <template>
     <div>
-        <p>Court</p>
-        <p>{{activePositions}}</p>
-        <p>{{activeClasses}}</p>
-        <div id="court-container">
+        <div id="color-selector">
+            <div class="green-selector selector-item" @click="changeColor('green')"></div>
+            <div class="blue-selector selector-item" @click="changeColor('blue')"></div>
+            <div class="red-selector selector-item" @click="changeColor('red')"></div>
+            <div class="black-selector selector-item" @click="changeColor('black')"></div>
+        </div>
+        <div id="court-container" :class="colorClasses[courtColor]">
             <svg
                 id="court-svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +52,11 @@
                 <CourtSquare :activeClass="activeClasses['PR7']" />
                 <CourtSquare :activeClass="activeClasses['PR8']" />
             </div>
+        <ul id="legend">
+            <li><i class="ci material-icons from">label</i> Player</li>
+            <li><i class="ci material-icons expected">label</i> Expected</li>
+            <li><i class="ci material-icons actual">label</i><span> Actual</span></li>
+        </ul>
         </div>
     </div>
 </template>
@@ -64,7 +72,19 @@ export default {
     },
     data() {
         return {
-            activePositions: store.state.activePositions
+            activePositions: store.state.activePositions,
+            courtColor: "green",
+            colorClasses: {
+                green: "green-court",
+                blue: "blue-court",
+                red: "red-court",
+                black: "black-court"
+            }
+        }
+    },
+    methods: {
+        changeColor: function(newColor) {
+            this.courtColor = newColor;
         }
     },
     computed: {
@@ -83,11 +103,63 @@ export default {
 </script>
 
 <style scoped>
-#court-container {
-    height: 480px;
+#color-selector {
+    display: flex;
+    justify-content: space-evenly;
     width: 240px;
-    background-color: rgb(33, 161, 118);
+}
+.selector-item {
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+}
+.selector-item:hover {
+    cursor: pointer;
+}
+.green-selector {   
+    background-color: rgb(40, 160, 120);
+    border: 3px solid rgb(40, 160, 120);
+}
+.green-selector:hover {   
+    border-color: rgb(50, 220, 160);
+}
+.blue-selector {    
+    background-color: rgb(40, 70, 160);
+    border: 3px solid rgb(40, 70, 160);
+}
+.blue-selector:hover {    
+    border-color: rgb(60, 120, 260);
+}
+.red-selector {    
+    background-color: rgb(160, 40, 40);
+    border: 3px solid rgb(160, 40, 40);
+}
+.red-selector:hover {    
+    border-color: rgb(220, 50, 50);
+}
+.black-selector {    
+    background-color: rgb(50, 50, 50);
+    border: 3px solid rgb(50, 50, 50);
+}
+.black-selector:hover {    
+    border-color: rgb(140, 140, 140);
+}
+#court-container {
+    height: 550px;
+    width: 240px;
     border-radius: 20px;
+}
+.green-court {
+    background-color: rgb(40, 160, 120);
+}
+.blue-court {
+    background-color: rgb(40, 70, 160);
+}
+.red-court {
+    background-color: rgb(160, 40, 40);
+}
+.black-court {
+    background-color: rgb(50, 50, 50);
 }
 #court-svg {
     position: absolute;
@@ -104,7 +176,27 @@ export default {
     width: 200px;
     position: absolute;
     z-index: 10;
-    padding: 25px 20px 20px 20px;
+    padding: 24px 20px 20px 20px;
     grid-gap: 8px;
+}
+#legend {
+    font-size: 16px;
+    color: white;
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+    top: 470px;
+}
+.ci {
+    font-size: 12px;
+}
+.from {
+    color: rgb(150, 240, 240);
+}
+.expected {
+    color: rgb(240, 240, 150);
+}
+.actual {
+    color: rgb(240, 150, 240);
 }
 </style>

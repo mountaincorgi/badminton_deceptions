@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { store } from '../store.js'
+import { store } from '../store.js';
 
 export default {
     name: "CardModal",
@@ -37,6 +37,7 @@ export default {
 <style scoped>
 .modal {
   width: 500px;
+  height: 500px;
   margin: 0px auto;
   padding: 20px;
   background-color: #fff;
@@ -44,6 +45,11 @@ export default {
   box-shadow: 0 2px 8px 3px;
   transition: all 0.2s ease-in;
   font-family: Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+  border-radius: 20px;
+}
+.modal::-webkit-scrollbar {
+  display: none;
 }
 .fadeIn-enter {
   opacity: 0;

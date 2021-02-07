@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{category.name}}</h1>
+        <p>{{category.name}}</p>
         <div id="table-category">
             <div :key="deception.id" v-for="deception in category.deceptions">
                 <Card :cardData="deception" />

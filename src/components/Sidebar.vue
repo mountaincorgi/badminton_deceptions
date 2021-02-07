@@ -38,16 +38,12 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: beige;
   padding-top: 45px;
   padding-bottom: 100px;
   padding-left: 40px;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-}
-#sidebar::-webkit-scrollbar {
-  display: none;
 }
 .left:hover {
     color: red;
