@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h5 class="header">Court Representation</h5>
         <div id="color-selector">
             <div class="green-selector selector-item" @click="changeColor('green')"></div>
             <div class="blue-selector selector-item" @click="changeColor('blue')"></div>
@@ -103,15 +104,20 @@ export default {
 </script>
 
 <style scoped>
+.header {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
 #color-selector {
     display: flex;
-    justify-content: space-evenly;
     width: 240px;
 }
 .selector-item {
     height: 14px;
     width: 14px;
     border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .selector-item:hover {
     cursor: pointer;
@@ -124,25 +130,25 @@ export default {
     border-color: rgb(50, 220, 160);
 }
 .blue-selector {    
-    background-color: rgb(40, 70, 160);
-    border: 3px solid rgb(40, 70, 160);
+    background-color: rgb(80, 140, 180);
+    border: 3px solid rgb(80, 140, 180);
 }
 .blue-selector:hover {    
-    border-color: rgb(60, 120, 260);
+    border-color: rgb(100, 180, 220);
 }
 .red-selector {    
-    background-color: rgb(160, 40, 40);
-    border: 3px solid rgb(160, 40, 40);
+    background-color: rgb(180, 90, 90);
+    border: 3px solid rgb(180, 90, 90);
 }
 .red-selector:hover {    
-    border-color: rgb(220, 50, 50);
+    border-color: rgb(220, 110, 110);
 }
 .black-selector {    
-    background-color: rgb(50, 50, 50);
-    border: 3px solid rgb(50, 50, 50);
+    background-color: rgb(100, 100, 100);
+    border: 3px solid rgb(100, 100, 100);
 }
 .black-selector:hover {    
-    border-color: rgb(140, 140, 140);
+    border-color: rgb(160, 160, 160);
 }
 #court-container {
     height: 550px;
@@ -151,15 +157,19 @@ export default {
 }
 .green-court {
     background-color: rgb(40, 160, 120);
+    transition: background-color 0.3s;
 }
 .blue-court {
-    background-color: rgb(40, 70, 160);
+    background-color: rgb(80, 140, 180);
+    transition: background-color 0.3s;
 }
 .red-court {
-    background-color: rgb(160, 40, 40);
+    background-color: rgb(180, 90, 90);
+    transition: background-color 0.3s;
 }
 .black-court {
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(100, 100, 100);
+    transition: background-color 0.3s;
 }
 #court-svg {
     position: absolute;

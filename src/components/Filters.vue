@@ -1,24 +1,23 @@
 <template>
-    <div>
-        <p>Filters</p>
-        <h3>Position</h3>
+    <div id="filters">
+        <h5 class="header">Position</h5>
             <input type="checkbox" id="net" name="net" value="net" v-model="computedFilterOptions.positionOptions.net">
-            <label for="net"> Net</label><br>
+            <label class="cbl" for="net"> Net</label><br>
 
             <input type="checkbox" id="front" name="front" value="front" v-model="computedFilterOptions.positionOptions.front">
-            <label for="front"> Front</label><br>
+            <label class="cbl" for="front"> Front</label><br>
 
             <input type="checkbox" id="mid" name="mid" value="mid" v-model="computedFilterOptions.positionOptions.mid">
-            <label for="mid"> Mid</label><br>
+            <label class="cbl" for="mid"> Mid</label><br>
 
             <input type="checkbox" id="back" name="back" value="back" v-model="computedFilterOptions.positionOptions.back">
-            <label for="back"> Back</label><br>
-        <h3>Grip</h3>
+            <label class="cbl" for="back"> Back</label><br>
+        <h5 class="header">Grip</h5>
             <input type="checkbox" id="forehand" name="forehand" value="forhand" v-model="computedFilterOptions.gripOptions.forehand">
-            <label for="forehand"> Forehand</label><br>
+            <label class="cbl" for="forehand"> Forehand</label><br>
 
             <input type="checkbox" id="backhand" name="backhand" value="backhand" v-model="computedFilterOptions.gripOptions.backhand">
-            <label for="backhand"> Backhand</label><br>
+            <label class="cbl" for="backhand"> Backhand</label><br>
     </div>
 </template>
 
@@ -37,5 +36,16 @@ export default {
 </script>
 
 <style scoped>
-
+input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+  filter: hue-rotate(150deg) brightness(1);
+}
+.header {
+    margin-bottom: 5px;;
+}
+.cbl {
+    font-size:16px;
+}
+#filters {
+    padding-top: 10px;
+}
 </style>

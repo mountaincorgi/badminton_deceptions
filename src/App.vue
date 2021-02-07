@@ -7,6 +7,7 @@
     <Sidebar
       id="sidebar"
       :filterOptions="filterOptions"
+      :activeHand="handedness"
       @change-handedness="changeHandedness"/>
     <Table
       id="table"
@@ -117,13 +118,15 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #515070;
+  background-color: #f6f6f6;
 }
 p {
   font-size: 1rem;
 }
 #table {
   margin-left: 370px;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 #modal {
   margin-left: 370px;

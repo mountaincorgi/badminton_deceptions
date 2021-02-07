@@ -43,13 +43,9 @@ export default {
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px 3px;
-  transition: all 0.2s ease-in;
-  font-family: Helvetica, Arial, sans-serif;
+  transition: visibility 1s;
   overflow-y: scroll;
   border-radius: 20px;
-}
-.modal::-webkit-scrollbar {
-  display: none;
 }
 .fadeIn-enter {
   opacity: 0;
@@ -57,7 +53,7 @@ export default {
 
 .fadeIn-leave-active {
   opacity: 0;
-  transition: all 0.2s step-end;
+  transition: opacity 1s;
 }
 
 .fadeIn-enter .modal,

@@ -3,9 +3,9 @@
         id="card"
         @mouseover="changeActivePositions(positions)"
         @click="changeActiveCard(cardData)">
-        <h5>{{cardData.name}}</h5>
-        <p>Grip: {{cardData.grip}}</p>
-        <p>Position: {{cardData.category}}</p>
+        <h5 class="header">{{cardData.name}}</h5>
+        <p>{{cardData.grip}}</p>
+        <p>{{cardData.category}}</p>
     </div>
 </template>
 
@@ -37,19 +37,27 @@ export default {
 </script>
 
 <style scoped>
+p {
+    font-size: 16px;
+}
+.header {
+    margin-top: 5px;
+}
 #card {
     width: 200px;
     height: 300px;
     word-wrap: break-word;
     margin: 20px;
     padding: 10px;
-    background-color: blanchedalmond;
-    border: 3px solid grey;
+    color: #515070;
+    background-color: #ffffff;
+    border: 2px solid #ffbb91;
+    border-radius: 5px;
+    transition: box-shadow 0.1s;
 }
 #card:hover {
-    background-color: lightblue;
     cursor: pointer;
-    border-color: green;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: #ff8e6e;
+    box-shadow: 0 4px 8px 0 rgba(51, 50, 70, 0.2), 0 4px 8px 0 rgba(51, 50, 70, 0.2);
 }
 </style>

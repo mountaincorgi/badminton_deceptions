@@ -1,11 +1,18 @@
 <template>
     <div id="sidebar">
-        <p>Sidebar</p>
+        <h5 class="header">Handedness</h5>
         <div class="handedness-buttons">
-            <strong>
-                <span class="left" @click="changeHandedness('L')">LEFT</span> | 
-                <span class="right" @click="changeHandedness('R')">RIGHT</span>
-            </strong></div>
+            <span class="btn" @click="changeHandedness('L')">
+                <i
+                    class="left-hand material-icons"
+                    :class="{'active-hand': activeHand === 'L'}">pan_tool</i>
+            </span>
+            <span class="btn" @click="changeHandedness('R')">
+                <i
+                    class="right-hand material-icons"
+                    :class="{'active-hand': activeHand === 'R'}">pan_tool</i>
+            </span>
+        </div>
         <Court />
         <Filters :filterOptions="filterOptions" />
     </div>
@@ -21,7 +28,7 @@ export default {
         Court,
         Filters
     },
-    props: ["filterOptions"],
+    props: ["filterOptions", "activeHand"],
     methods: {
         changeHandedness: function(newHandedness) {
             this.$emit('change-handedness', newHandedness);
@@ -38,19 +45,35 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  padding-top: 45px;
+  padding-top: 40px;
   padding-bottom: 100px;
   padding-left: 40px;
   overflow-y: scroll;
+  background-color: #f6f6f6;
+  color: #515070;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.left:hover {
-    color: red;
-    cursor: pointer;
+.header {
+    margin-top: 0px;
+    margin-bottom: 8px;
 }
-.right:hover {
-    color: blue;
+.handedness-buttons {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.btn {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+.btn:hover {
     cursor: pointer;
+    color: #ff8e6e;
+}
+.right-hand {
+    transform: scale(-1, 1);
+}
+.active-hand {
+    color: #ff8e6e;
 }
 </style>
