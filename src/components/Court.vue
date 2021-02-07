@@ -105,10 +105,6 @@ export default {
     position: absolute;
     z-index: 10;
     padding: 25px 20px 20px 20px;
-    grid-gap: 6px;
-}
-.gi {
-    background-color: white;
-    opacity: 0.05;
+    grid-gap: 8px;
 }
 </style>

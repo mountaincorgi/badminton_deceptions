@@ -44,9 +44,12 @@ export default {
     margin: 20px;
     padding: 10px;
     background-color: blanchedalmond;
+    border: 3px solid grey;
 }
 #card:hover {
     background-color: lightblue;
     cursor: pointer;
+    border-color: green;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>

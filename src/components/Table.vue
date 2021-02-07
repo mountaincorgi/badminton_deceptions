@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Table</h1>
+        <p>Table</p>
         <div :key="category.id" v-for="category in tableData.categories">
             <TableCategory :category="category" />
         </div>

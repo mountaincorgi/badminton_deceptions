@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <p class="stuff">Handedness: {{handedness}}</p>
-    <p class="test">active card: {{store.state.activeCard}}</p>
-    <p class="test">openModal: {{store.state.modalOpen}}</p>
-    <CardModal id="modal" :isOpen="true" />
+    <p class="stuff">Open: {{state.modalOpen}}</p>
+    <p class="stuff">Active: {{state.activeCard}}</p>
+    <CardModal
+      id="modal"
+      :isOpen="state.modalOpen" 
+      :modalData="state.activeCard" />
     <Sidebar
       id="sidebar"
       :filterOptions="filterOptions"
@@ -36,7 +39,7 @@ export default {
   },
   data() {
     return {
-      store: store,
+      state: store.state,
       deceptionDataL: jsonLeft,
       deceptionDataR: jsonRight,
       handedness: "R",
