@@ -51,8 +51,6 @@ export default {
   overflow-y: scroll;
   background-color: #f6f6f6;
   color: #515070;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
 .header {
     margin-top: 0px;
