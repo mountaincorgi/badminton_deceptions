@@ -1,6 +1,6 @@
 <template>
     <div id="sidebar">
-        <h5 class="header">Handedness</h5>
+        <p class="header">Handedness</p>
         <div class="handedness-buttons">
             <span class="btn" @click="changeHandedness('L')">
                 <i
@@ -45,16 +45,17 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 100px;
   padding-left: 40px;
   overflow-y: scroll;
-  background-color: #f6f6f6;
-  color: #515070;
+  background-color: #222831;
+  color: white;
 }
 .header {
     margin-top: 0px;
     margin-bottom: 8px;
+    font-size: 18px;
 }
 .handedness-buttons {
     padding-bottom: 10px;
@@ -66,12 +67,12 @@ export default {
 }
 .btn:hover {
     cursor: pointer;
-    color: #ff8e6e;
+    color: #f05454;
 }
 .right-hand {
     transform: scale(-1, 1);
 }
 .active-hand {
-    color: #ff8e6e;
+    color: #f05454;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3 class="header">{{nameMapping[category.name]}}</h3>
+        <p class="header">{{nameMapping[category.name]}}</p>
         <div id="table-category">
             <div :key="deception.id" v-for="deception in category.deceptions">
                 <Card :cardData="deception" />
@@ -37,7 +37,9 @@ export default {
     flex-wrap: wrap;
 }
 .header {
-    padding-left: 20px;
+    margin-left: 20px;
     margin-bottom: 0px;
+    font-size: 25px;
+    font-weight: 500;
 }
 </style>

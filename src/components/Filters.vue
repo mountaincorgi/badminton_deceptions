@@ -1,6 +1,6 @@
 <template>
     <div id="filters">
-        <h5 class="header">Position</h5>
+        <p class="header">Position</p>
             <input type="checkbox" id="net" name="net" value="net" v-model="computedFilterOptions.positionOptions.net">
             <label class="cbl" for="net"> Net</label><br>
 
@@ -12,7 +12,7 @@
 
             <input type="checkbox" id="back" name="back" value="back" v-model="computedFilterOptions.positionOptions.back">
             <label class="cbl" for="back"> Back</label><br>
-        <h5 class="header">Grip</h5>
+        <p class="header">Grip</p>
             <input type="checkbox" id="forehand" name="forehand" value="forhand" v-model="computedFilterOptions.gripOptions.forehand">
             <label class="cbl" for="forehand"> Forehand</label><br>
 
@@ -37,10 +37,11 @@ export default {
 
 <style scoped>
 input[type="checkbox"] { /* change "blue" browser chrome to yellow */
-  filter: hue-rotate(150deg) brightness(1);
+  filter: hue-rotate(140deg) brightness(0.8);
 }
 .header {
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 .cbl {
     font-size:16px;

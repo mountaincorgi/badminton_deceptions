@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h5 class="header">Court Representation</h5>
+        <p class="header">Court Representation</p>
         <div id="color-selector">
             <div class="green-selector selector-item" @click="changeColor('green')"></div>
             <div class="blue-selector selector-item" @click="changeColor('blue')"></div>
@@ -107,6 +107,7 @@ export default {
 .header {
     margin-top: 0px;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 #color-selector {
     display: flex;

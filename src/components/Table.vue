@@ -1,6 +1,6 @@
 <template>
     <div id="table">
-        <h1 class="header"><u>Badminton Deceptions</u></h1>
+        <p class="header">Badminton Deceptions</p>
         <p class="description">
             This website exists to help everyone learn badminton deception
             techniques. Hover over a card and see its on-court representation
@@ -29,9 +29,15 @@ export default {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 20px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #222831
 }
 .description {
     margin-left: 20px;
     margin-right: 150px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    color: #5c6b7a;
 }
 </style>

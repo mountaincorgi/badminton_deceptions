@@ -3,7 +3,7 @@
         id="card"
         @mouseover="changeActivePositions(positions)"
         @click="changeActiveCard(cardData)">
-        <h5 class="header">{{cardData.name}}</h5>
+        <p class="header">{{cardData.name}}</p>
         <p>{{cardData.grip}}</p>
         <p>{{cardData.category}}</p>
     </div>
@@ -39,9 +39,13 @@ export default {
 <style scoped>
 p {
     font-size: 16px;
+    color: #5c6b7a;
 }
 .header {
     margin-top: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222831;
 }
 #card {
     width: 200px;
@@ -49,15 +53,14 @@ p {
     word-wrap: break-word;
     margin: 20px;
     padding: 10px;
-    color: #515070;
-    background-color: #ffffff;
-    border: 2px solid #ffbb91;
+    background-color: white;
+    border: 2px solid #30475e;
     border-radius: 5px;
     transition: box-shadow 0.1s;
 }
 #card:hover {
     cursor: pointer;
-    border-color: #ff8e6e;
-    box-shadow: 0 4px 8px 0 rgba(51, 50, 70, 0.2), 0 4px 8px 0 rgba(51, 50, 70, 0.2);
+    border-color: #f05454;
+    box-shadow: 0 4px 8px 0 #36495c73, 0 4px 8px 0 #36495c73;
 }
 </style>

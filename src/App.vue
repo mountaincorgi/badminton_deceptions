@@ -116,10 +116,11 @@ export default {
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #515070;
-  background-color: #f6f6f6;
+  font-family: Noto Sans JP, Helvetica, Arial, sans-serif;
+  color: #222831;
+  background-color: white;
 }
 p {
   font-size: 1rem;
