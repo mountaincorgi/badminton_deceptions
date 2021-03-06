@@ -13,10 +13,10 @@
             <input type="checkbox" id="back" name="back" value="back" v-model="computedFilterOptions.positionOptions.back">
             <label class="cbl" for="back"> Back</label><br>
         <p class="header">Grip</p>
-            <input type="checkbox" id="forehand" name="forehand" value="forhand" v-model="computedFilterOptions.gripOptions.forehand">
-            <label class="cbl" for="forehand"> Forehand</label><br>
+            <input type="checkbox" id="F" name="F" value="forhand" v-model="computedFilterOptions.gripOptions.F">
+            <label class="cbl" for="F"> Forehand</label><br>
 
-            <input type="checkbox" id="backhand" name="backhand" value="backhand" v-model="computedFilterOptions.gripOptions.backhand">
+            <input type="checkbox" id="backhand" name="backhand" value="backhand" v-model="computedFilterOptions.gripOptions.B">
             <label class="cbl" for="backhand"> Backhand</label><br>
     </div>
 </template>

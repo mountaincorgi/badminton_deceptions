@@ -6,7 +6,7 @@
           <div class="modal" @click.stop>
             <p>{{modalData.name}}</p>
             <iframe width="400px" height="270px" src="https://www.youtube.com/embed/s-HfFmgkPQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>{{modalData.link}}</p>
+            <p>{{modalData.links}}</p>
             <p>{{modalData.grip}}</p>
             <p>{{modalData.category}}</p>
             <p>{{modalData.fromPosition}}</p>

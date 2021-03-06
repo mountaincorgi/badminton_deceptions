@@ -43,8 +43,8 @@ export default {
       handedness: "R",
       filterOptions: {
         gripOptions: {
-          forehand: true,
-          backhand: true
+          F: true,
+          B: true
         },
         positionOptions: {
           net: true,
@@ -82,7 +82,7 @@ export default {
       );
     },
     selectedGrips: function() {
-      return ["forehand", "backhand"].filter(
+      return ["F", "B"].filter(
         g => this.filterOptions.gripOptions[g] === true
       );
     },

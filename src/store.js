@@ -9,12 +9,12 @@ export const store = {
         },
         activeCard: {
             name: null,
-            link: null,
             grip: null,
             category: null,
             fromPosition: null,
             expectedPosition: null,
-            actualPosition: null
+            actualPosition: null,
+            links: null
         },
         modalOpen: false
     }),
@@ -25,7 +25,7 @@ export const store = {
     },
     changeActiveCard(newActiveCard) {
         this.state.activeCard.name = newActiveCard.name;
-        this.state.activeCard.link = newActiveCard.link;
+        this.state.activeCard.links = newActiveCard.links;
         this.state.activeCard.grip = newActiveCard.grip;
         this.state.activeCard.category = newActiveCard.catgeory;
         this.state.activeCard.fromPosition = newActiveCard.fromPosition;
