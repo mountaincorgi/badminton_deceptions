@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 input[type="checkbox"] { /* change "blue" browser chrome to yellow */
-  filter: hue-rotate(140deg) brightness(0.8);
+  filter: hue-rotate(140deg) brightness(0.9);
 }
 .header {
     margin-bottom: 5px;

@@ -1,8 +1,9 @@
 <template>
     <div
-        id="card"
+        class="card"
         @mouseover="changeActivePositions(positions)"
         @click="changeActiveCard(cardData)">
+        <CardMiniCourt :cardPositions="positions"/>
         <p class="header">{{cardData.name}}</p>
         <p>{{cardData.grip}}</p>
         <p>{{cardData.category}}</p>
@@ -11,10 +12,14 @@
 
 <script>
 import { store } from '../store.js'
+import CardMiniCourt from './CardMiniCourt.vue'
 
 export default {
     name: "Card",
     props: ["cardData"],
+    components: {
+        CardMiniCourt
+    },
     computed: {
         positions: function() {
             return {
@@ -47,7 +52,7 @@ p {
     font-weight: 500;
     color: #222831;
 }
-#card {
+.card {
     width: 200px;
     height: 300px;
     word-wrap: break-word;
@@ -57,10 +62,15 @@ p {
     border: 2px solid #30475e;
     border-radius: 5px;
     transition: box-shadow 0.1s;
+    position: relative;
 }
-#card:hover {
+.card:hover {
     cursor: pointer;
     border-color: #f05454;
     box-shadow: 0 4px 8px 0 #36495c73, 0 4px 8px 0 #36495c73;
+}
+.x {
+    position: absolute;
+    background-color: red;
 }
 </style>

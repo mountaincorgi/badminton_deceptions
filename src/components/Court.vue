@@ -1,13 +1,17 @@
 <template>
     <div>
         <p class="header">Court Representation</p>
+        <!-- Color selector -->
         <div id="color-selector">
             <div class="green-selector selector-item" @click="changeColor('green')"></div>
             <div class="blue-selector selector-item" @click="changeColor('blue')"></div>
             <div class="red-selector selector-item" @click="changeColor('red')"></div>
             <div class="black-selector selector-item" @click="changeColor('black')"></div>
         </div>
+
+        <!-- Main court container -->
         <div id="court-container" :class="colorClasses[courtColor]">
+            <!-- SVG Overlay -->
             <svg
                 id="court-svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +22,8 @@
                     <path d="M82.02 125.876V2.467M14.53 178.793V1.64m134.98 177.154V1.64m13.154 22.01H2.432m160.232 102.194H2.432m159.706 52.424H1.9V1.9h160.238v176.367zM82.02 230.591V354m67.49-176.326V354.83M14.529 177.674V354.83M1.374 332.817h160.232M1.374 230.625h160.232M1.9 178.2h160.238v176.367H1.9V178.2z" fill="none"/>
                 </g>
             </svg>
-
+            
+            <!-- Court grid -->
             <div id="court">
                 <CourtSquare :activeClass="activeClasses['OL8']" />
                 <CourtSquare :activeClass="activeClasses['OL7']" />
@@ -53,7 +58,9 @@
                 <CourtSquare :activeClass="activeClasses['PR7']" />
                 <CourtSquare :activeClass="activeClasses['PR8']" />
             </div>
-        <ul id="legend">
+
+        <!-- Legend -->
+        <ul class="legend">
             <li><i class="ci material-icons from">label</i> Player</li>
             <li><i class="ci material-icons expected">label</i> Expected</li>
             <li><i class="ci material-icons actual">label</i><span> Actual</span></li>
@@ -109,6 +116,8 @@ export default {
     margin-bottom: 10px;
     font-size: 18px;
 }
+
+/* Color selector */
 #color-selector {
     display: flex;
     width: 240px;
@@ -151,6 +160,8 @@ export default {
 .black-selector:hover {    
     border-color: rgb(160, 160, 160);
 }
+
+/* Court container */
 #court-container {
     height: 550px;
     width: 240px;
@@ -172,6 +183,8 @@ export default {
     background-color: rgb(100, 100, 100);
     transition: background-color 0.3s;
 }
+
+/* Court SVG */
 #court-svg {
     position: absolute;
     height: 440px;
@@ -179,6 +192,8 @@ export default {
     stroke: white;
     padding: 20px;
 }
+
+/* Court grid */
 #court {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -190,7 +205,9 @@ export default {
     padding: 24px 20px 20px 20px;
     grid-gap: 8px;
 }
-#legend {
+
+/* Legend */
+.legend {
     font-size: 16px;
     color: white;
     list-style-type: none;
@@ -205,9 +222,9 @@ export default {
     color: rgb(150, 240, 240);
 }
 .expected {
-    color: rgb(240, 240, 150);
+    color: rgb(171, 240, 150);
 }
 .actual {
-    color: rgb(240, 150, 240);
+    color: rgb(240, 150, 150);
 }
 </style>

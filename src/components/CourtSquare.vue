@@ -20,11 +20,11 @@ export default {
     opacity: 1;
 }
 .expected {
-    background-color: rgb(240, 240, 150);
+    background-color: rgb(240, 150, 150);
     opacity: 1;
 }
 .actual {
-    background-color: rgb(240, 150, 240);
+    background-color: rgb(171, 240, 150);
     opacity: 1;
 }
 </style>
