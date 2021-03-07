@@ -69,6 +69,10 @@ p {
     border-color: #f05454;
     box-shadow: 0 4px 8px 0 #36495c73, 0 4px 8px 0 #36495c73;
 }
+.card:hover .header {
+    color: #f05454;
+    text-decoration: underline;
+}
 .x {
     position: absolute;
     background-color: red;
