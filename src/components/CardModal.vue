@@ -4,14 +4,24 @@
       <div v-if="isOpen">
         <div class="overlay" @click="toggleModal">
           <div class="modal" @click.stop>
-            <p>{{modalData.name}}</p>
-            <iframe width="400px" height="270px" src="https://www.youtube.com/embed/s-HfFmgkPQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>{{modalData.links}}</p>
-            <p>{{modalData.grip}}</p>
-            <p>{{modalData.category}}</p>
-            <p>{{modalData.fromPosition}}</p>
-            <p>{{modalData.expectedPosition}}</p>
-            <p>{{modalData.actualPosition}}</p>
+
+            <!-- Media container -->
+            <div class="media-container">
+              <p>{{modalData.name}}</p>
+              <iframe width="400px" height="270px" src="https://www.youtube.com/embed/s-HfFmgkPQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Modal content -->
+            <div class="content">
+              <p>{{modalData.links}}</p>
+              <p>{{modalData.grip}}</p>
+              <p>{{modalData.category}}</p>
+              <p>{{modalData.fromPosition}}</p>
+              <p>{{modalData.expectedPosition}}</p>
+              <p>{{modalData.actualPosition}}</p>
+            </div>
+
+            <!-- Toggle visibility button -->
             <button @click="toggleModal">Close</button>
           </div>
         </div>
