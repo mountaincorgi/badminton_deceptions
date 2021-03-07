@@ -9,7 +9,8 @@ def to_left_handed(position):
         return position.replace("R", "L")
 
 csv_path = f"{sys.path[0]}/deceptions.csv"
-data_right, data_left = {"deceptions": []}, {"deceptions": []}
+data_right = {"deceptions": []}
+data_left = {"deceptions": []}
 
 df = pd.read_csv(csv_path)
 for row in df.itertuples():
@@ -40,7 +41,8 @@ for row in df.itertuples():
         }
     )
 
-with open("deceptionDataRight.json", "w") as f1:
-    json.dump(data_right, f1)
-with open("deceptionDataLeft.json", "w") as f2:
-    json.dump(data_left, f2)
+with open("deceptionDataRight.json", "w") as f_right:
+    json.dump(data_right, f_right)
+
+with open("deceptionDataLeft.json", "w") as f_left:
+    json.dump(data_left, f_left)
