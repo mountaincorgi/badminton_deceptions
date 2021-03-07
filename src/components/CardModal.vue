@@ -2,26 +2,31 @@
   <div>
     <transition name="modal">
       <div v-if="isOpen">
+        <!-- Overlay -->
         <div class="overlay" @click="toggleModal">
-          <div class="modal" @click.stop>
 
+          <!-- Modal -->
+          <div class="modal" @click.stop>
             <!-- Media container -->
             <div class="video-container">
+
               <!-- Tabs -->
               <div class="video-tabs">
+                <!-- Toggle visibility button -->
+                <button @click="toggleModal">X</button>
                 <!-- Video tabs -->
                 <div v-for="(link, index) in modalData.links" :key="index" class="tab">
                   <input type="radio" :id="'t' + index" name="tab-group" :checked="index==0">
-                  <label :for="'t' + index">{{index + 1}}</label>
+                  <label :for="'t' + index" class="tab">{{index + 1}}</label>
        
                   <div class="video-content">
-                    {{ link }}
+                    <div v-html="link"></div>
                   </div> 
                 </div>
                 <!-- Tutorial tab -->
                 <div class="tab">
                   <input type="radio" id="tutorial-tab" name="tab-group">
-                  <label for="tutorial-tab">Tutorial</label>
+                  <label for="tutorial-tab" class="tutorial-label">Tutorial</label>
        
                   <div class="video-content">
                     <p>Coming soon!</p>
@@ -31,12 +36,10 @@
             </div>
 
             <!-- Modal content -->
-            <div class="content">
-              <p>Good for catching the opponent out!</p>
+            <div class="modal-content">
+              <!-- {{ modalData.description }} -->
             </div>
 
-            <!-- Toggle visibility button -->
-            <button @click="toggleModal">Close</button>
           </div>
         </div>
       </div>
@@ -61,16 +64,16 @@ export default {
 <style scoped>
 /* Modal */
 .modal {
-  width: 500px;
-  height: 500px;
+  width: 440px;
+  height: 360px;
   margin: 0px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px 3px;
+  background-color: #222831;
+  box-shadow: 0 1px 2px 2px;
   transition: visibility 1s;
   overflow-y: scroll;
-  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .fadeIn-enter {
   opacity: 0;
@@ -86,40 +89,47 @@ export default {
 
 /* Tabs */
 .video-tabs {
+  color: white;
   position: relative;
-  min-height: 200px;
+  min-height: 350px;
   clear: both;
-  margin: 25px 0;
 }
 .tab {
   float: left;
-  width: 50px;
 }
 .tab label {
-  background: #eee; 
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  margin-left: -1px; 
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #30475e;
+  border-radius: 5px;
+  padding: 5px 15px 8px 15px;
+  margin: 10px;
   position: relative;
-  left: 1px;
+  left: 8px;
+}
+.tab label:hover {
+  cursor: pointer;
+  background-color: #30475e;
+}
+.tutorial-label {
+  display: inline-block;
+  width: 100px!important;
 }
 .tab [type=radio] {
   display: none;   
 }
 .video-content {
   position: absolute;
-  top: 28px;
+  top: 60px;
   left: 0;
-  background: white;
   right: 0;
   bottom: 0;
   padding: 20px;
-  border: 1px solid #ccc; 
+  background: #222831;
 }
 [type=radio]:checked ~ label {
-  background: white;
-  border-bottom: 1px solid white;
   z-index: 20;
+  background-color: #30475e;
 }
 [type=radio]:checked ~ label ~ .video-content {
   z-index: 1;
@@ -127,11 +137,20 @@ export default {
 
 /* Modal button */
 button {
+  position: absolute;
   padding: 7px;
   margin-top: 10px;
-  background-color: green;
+  background-color: #222831;
+  border: 0px;
+  border-radius: 5px;
   color: white;
-  font-size: 1.1rem;
+  left: 400px;
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #30475e;
+  color: #f05454;
 }
 
 /* Modal overlay */
@@ -145,7 +164,6 @@ button {
   width: 100%;
   height: 100%;
   background: #00000094;
-  z-index: 999;
-  transition: opacity 0.2s ease;
+  z-index: 100;
 }
 </style>

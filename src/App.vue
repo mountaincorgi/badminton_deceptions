@@ -25,8 +25,8 @@ import { store } from './store.js';
 
 
 // load json data from external file
-import jsonLeft from './deceptionDataLeft.json' 
-import jsonRight from './deceptionDataRight.json' 
+import jsonLeft from './static/deceptionDataLeft.json' 
+import jsonRight from './static/deceptionDataRight.json' 
 
 export default {
   name: 'App',

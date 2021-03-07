@@ -73,8 +73,4 @@ p {
     color: #f05454;
     text-decoration: underline;
 }
-.x {
-    position: absolute;
-    background-color: red;
-}
 </style>

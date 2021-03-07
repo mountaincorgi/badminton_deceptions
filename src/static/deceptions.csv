@@ -1,0 +1,30 @@
+name,player_position,expected_position,actual_position,category,grip,v1,v1_start,v1_end,v2,v2_start,v2_end,v3,v3_start,v3_end,tutorial_link,player_tags
+Forehand | Hold & Flick | Straight,PR2,OR2,OR8,net,F,9PDQGd-S8_A,710,732,d3IADRdsCWA,423,431,9ZI8ljzbLt0,664,670,,"Carsten Mogensen, "
+Backhand | Hold & Flick | Straight,PL2,OL2,OL8,net,B,1LiuMj909LE,1111,1135,9POQaCKWNDw,4090,4112,FVixBK3O7XQ,566,600,,"Anthony Ginting, Kenta Nishimoto, "
+Forehand | Hold & Flick | Cross,PR2,OR2,OL8,net,F,PCyNbtMVkpI,2005,2030,HVR7KSJM1XM,2701,2725,tEAwSEjFhh8,3188,3208,,"Tai Tzu Ying, "
+Backhand | Hold & Flick | Cross,PL2,OL2,OR8,net,B,1LiuMj909LE,2042,2064,AQN09SdyP1o,757,780,flOedwIZtf8,936,962,,"Lin Dan, "
+Forehand | High Net Deception,PR1,OR1,OR2,net,F,UexD_Nl3sPY,795,825,g8mkTWQZm4c,674,694,WI8Od4jBpUc,655,685,,"Anders Antonsen, Yuta Watanabe, "
+Backhand | High Net Deception,PL1,OL1,OL2,net,B,QTkUl61_cPs,1542,1572,q8Vs6W-0PbI,959,978,vLqQpFKrglE,3038,3060,,"Ratchanok Intanon, "
+Forehand | High Net Deception 2,PR1,OR4,OR2,net,F,krbc_Rmlsp0,2068,2100,WDgBPCn1Z2g,942,950,a64pWiUtgJQ,1175,1200,,
+Backhand | High Net Deception 2,PL1,OL4,OL2,net,B,MuSBFHp1YW8,2474,2504,MuSBFHp1YW8,1636,1660,KkwNopIQkP4,1003,1027,,
+Forehand | Low Net Deception,PR3,OR1,OR2,front,F,3mMzr0Rc94c,1631,1651,UexD_Nl3sPY,556,580,g8mkTWQZm4c,558,571,,"Anthony Ginting, Sam Parsons"
+Backhand | Low Net Deception,PR1,OR1,OL2,front,B,AQN09SdyP1o,3430,3452,3mMzr0Rc94c,665,678,MuSBFHp1YW8,2370,2377,,"Kento Momota, Lin Dan, "
+Forehand | Fake Lift,PR4,OR8,OR2,front,F,_ppK0-q8llM,920,955,3mMzr0Rc94c,697,717,1LiuMj909LE,1015,1040,,"Lin Dan, "
+Backhand | Fake Lift,PL4,OL8,OL2,front,B,hlxyPa0-q_s,718,744,qOWTcZ_Xm94,839,860,MSFs6fUIvwI,1923,1946,,"Lin Dan, Lee Chong Wei,"
+Forehand | Fake Straight Net,PR4,OR2,OL2,front,F,qOWTcZ_Xm94,2543,2585,PCyNbtMVkpI,2043,2066,WI8Od4jBpUc,3516,3526,,"Lee Chong Wei, Goh V Shem, "
+Backhand | Fake Straight Net,PL4,OL2,OR2,front,B,MuSBFHp1YW8,1242,1260,9POQaCKWNDw,903,913,a64pWiUtgJQ,1272,1280,,"Lee Chong Wei, "
+Forehand | Held Lift | Straight,PR4,OR2,OR8,front,F,rnW-Chxs014,2330,2360,9ZI8ljzbLt0,509,519,9POQaCKWNDw,1008,1018,,"Lee Chong Wei, "
+Backhand | Held Lift | Straight,PL4,OL2,OL8,front,B,Fx4c0ZxHPoY,886,910,JBxdk5V9zVQ,1705,1720,Du3jLarHBu4,1828,1836,,"Lee Chong Wei, "
+Forehand | Held Lift | Cross,PR4,OR2,OL8,front,F,YWcrmWphcmA,666,689,a64pWiUtgJQ,1082,1103,hlxyPa0-q_s,2837,2849,,"Lin Dan, "
+Backhand | Held Lift | Cross,PL4,OL2,OR8,front,B,1LiuMj909LE,2560,2570,bx1edVP9jdI,688,698,zPAuJIkpR3k,2344,2351,,"Tai Tzu Ying, "
+Forehand | Serve Return Deception | Singles,PL1,OL8,OR8,front,F,HVR7KSJM1XM,1501,1509,Nl53Ha2fmpU,761,769,1LiuMj909LE,1480,1487,,
+Backhand | Serve Return Deception | Singles,PR1,OR8,OL8,front,B,yWTOg3uyaLs,1382,1389,KkwNopIQkP4,3234,3244,WdpnWCLSjqQ,2036,2043,,
+Forehand | Held Drive,PR5,OL5,OR6,mid,F,m-MIKJkfVN0,2877,2890,,,,,,,,Yuta Watanabe
+Backhand | Sliced Drive,PL6,OL6,OR4,mid,B,mMgh_FrSaOw,9896,9920,jBTZ4RF3x2U,2524,2534,,,,,"Kevin Sanjaya Sukamuljo,  "
+Forehand | Sliced Drop,PR8,OR4,OL4,back,F,AQN09SdyP1o,2557,2580,3mMzr0Rc94c,2773,2795,3DK2AUP2XoY,8383,8404,,"Shi Yuqi, "
+Forehand | Reverse Sliced Drop,PR8,OR8,OR4,back,F,tEAwSEjFhh8,570,592,JBxdk5V9zVQ,1522,1548,AQN09SdyP1o,1288,1310,,Daren Liew
+Backhand | Reverse Sliced Drop,PL8,OL8,OL4,back,B,PowqJQFaZZQ,3715,3738,PCTJEMLyffM,816,838,,,,,"Tai Tzu Ying, "
+Forehand | Reverse Sliced Drop | Round the Head,PL8,OL4,OR4,back,F,sYd8iAO9fo8,500,520,ZuJ7MOo-D_M,971,992,g8mkTWQZm4c,614,631,,"Lin Dan, "
+Forehand | Fake Smash | Drop,PR8,PR6,OR4,back,F,hlxyPa0-q_s,924,956,DHbx84hQqyA,600,617,m-MIKJkfVN0,3656,3680,,"Yuta Watanabe,"
+Forehand | Fake Clear | Drop,PR8,OR8,OR4,back,F,WI8Od4jBpUc,1352,1392,SjlJ_cV3DdA,2360,2390,O0qQceS3_Uw,2145,2185,,
+Forehand | Cross Drop Deception,PR8,OR6,OL4,back,F,9POQaCKWNDw,1133,1156,FVixBK3O7XQ,1354,1374,PCyNbtMVkpI,1952,1970,,"Tai Tzu Ying, "
