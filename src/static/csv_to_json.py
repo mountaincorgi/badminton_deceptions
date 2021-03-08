@@ -4,7 +4,7 @@ import json
 
 
 EMBED_TEMPLATE = (
-    '<iframe width="400" height="250" src="https://www.youtube.com/embed/{identifier}?start={start_time}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    '<iframe width="640" height="360" src="https://www.youtube.com/embed/{identifier}?start={start_time}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 )
 
 

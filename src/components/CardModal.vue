@@ -64,8 +64,8 @@ export default {
 <style scoped>
 /* Modal */
 .modal {
-  width: 440px;
-  height: 360px;
+  width: 680px;
+  height: 480px;
   margin: 0px auto;
   padding: 20px;
   background-color: #222831;
