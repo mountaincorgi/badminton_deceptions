@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img class="main-bg-img" src="./static/tty.png">
     <CardModal
       id="modal"
       :isOpen="state.modalOpen" 
@@ -117,6 +118,13 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+.main-bg-img {
+  background-repeat: no-repeat;
+  width: 1500px;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+}
 #app {
   font-family: Noto Sans JP, Helvetica, Arial, sans-serif;
   color: #222831;
