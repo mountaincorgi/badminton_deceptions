@@ -79,8 +79,8 @@ export default {
     height: 200px;
     width: 100px;
     stroke: #bbc6cf;
-    left: 45%;
-    top: 30%;
+    left: 49%;
+    top: 33%;
 }
 
 /* Court grid */
@@ -90,8 +90,8 @@ export default {
     grid-template-rows: 3fr 3fr 2fr 1fr 1fr 2fr 3fr 3fr;
     height: 200px;
     width: 92px;
-    left: 46.5%;
-    top: 30%;
+    left: 51%;
+    top: 33%;
     z-index: 20;
     /* background-color: red;
     opacity: 0.5; */

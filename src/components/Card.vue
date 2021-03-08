@@ -5,8 +5,8 @@
         @click="changeActiveCard(cardData)">
         <CardMiniCourt :cardPositions="positions"/>
         <p class="header">{{cardData.name}}</p>
-        <p>{{cardData.grip}}</p>
-        <p>{{cardData.category}}</p>
+        <p>{{grip}}</p>
+        <p>{{category}}</p>
     </div>
 </template>
 
@@ -27,6 +27,17 @@ export default {
                 expectedPosition: this.cardData.expectedPosition,
                 actualPosition: this.cardData.actualPosition
             }
+        },
+        grip: function() {
+            if (this.cardData.grip === "F") {
+                return "Forehand";
+            } else {
+                return "Backhand";
+            }
+        },
+        category: function() {
+            let category = this.cardData.category;
+            return category.charAt(0).toUpperCase() + category.slice(1);
         }
     },
     methods: {
