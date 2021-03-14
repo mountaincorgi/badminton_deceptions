@@ -10,6 +10,7 @@
       :filterOptions="filterOptions"
       :activeHand="handedness"
       :class="{closed: hideSidebar}"
+      @toggle-sidebar-x="toggleSidebar"
       @change-handedness="changeHandedness"/>
     <Table
       id="table"
@@ -158,9 +159,9 @@ p {
 
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
-  /* #app {
+  #app {
     overflow-x: hidden;
-  } */
+  }
   #table {
     margin-left: 30px;
   }

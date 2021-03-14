@@ -1,5 +1,8 @@
 <template>
     <div id="sidebar">
+        <div id="burger-close">
+            <i class="burger-close-button material-icons" @click="toggleSidebarX()">clear</i>
+        </div>
         <p class="header">Handedness</p>
         <div class="handedness-buttons">
             <span class="btn" @click="changeHandedness('L')">
@@ -32,6 +35,9 @@ export default {
     methods: {
         changeHandedness: function(newHandedness) {
             this.$emit('change-handedness', newHandedness);
+        },
+        toggleSidebarX: function() {
+            this.$emit('toggle-sidebar-x');
         }
     }
 }
@@ -45,12 +51,26 @@ export default {
   top: 0;
   bottom: 0;
   left: 0;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 100px;
   padding-left: 40px;
   overflow-y: scroll;
   background-color: #222831;
   color: white;
+}
+#burger-close {
+    position: relative;
+}
+.burger-close-button {
+    z-index: 5;
+    color: white;
+    position: relative;
+    margin-left: 205px;
+    font-size: 2rem;
+}
+.burger-button:hover {
+    cursor: pointer;
+    color: #f05454;
 }
 .header {
     margin-top: 0px;
