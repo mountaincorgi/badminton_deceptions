@@ -68,7 +68,7 @@ export default {
     margin-left: 205px;
     font-size: 2rem;
 }
-.burger-button:hover {
+.burger-close-button:hover {
     cursor: pointer;
     color: #f05454;
 }
