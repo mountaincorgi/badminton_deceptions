@@ -76,8 +76,8 @@ export default {
 /* Tabs */
 .video-tabs {
   position: relative;
-  height: 500px;
-  width: 800px;
+  height: 80%;
+  width: 80%;
   clear: both;
 }
 .tab {
@@ -105,10 +105,10 @@ export default {
 }
 .video-content {
   position: absolute;
-  top: 60px;
+  height: 500px;
+  width: 630px;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 60px;
   padding: 20px;
   background: white;
 }
@@ -160,10 +160,15 @@ button:hover {
   }
   .video-tabs {
     padding-top: 8px;
+    height: 500px;
   }
   .tab label {
     margin: 5px;
     padding: 0px 5px 0px 5px;
+  }
+  .video-content {
+    width: 108%;
+    height: 400px;
   }
   button {
     left: 250px;
