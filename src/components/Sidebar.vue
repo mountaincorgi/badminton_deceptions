@@ -95,4 +95,11 @@ export default {
 .active-hand {
     color: #f05454;
 }
+
+
+@media (min-width: 600px) {
+    #burger-close {
+        display: none;
+    }
+}
 </style>
