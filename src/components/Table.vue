@@ -37,6 +37,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 #table {
     z-index: 2;
+    margin-bottom: 40px;
 }
 #burger {
     position: relative;
