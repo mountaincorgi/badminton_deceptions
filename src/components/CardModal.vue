@@ -1,49 +1,47 @@
 <template>
-  <div>
-    <transition name="modal">
-      <div v-if="isOpen">
-        <!-- Overlay -->
-        <div class="overlay" @click="toggleModal">
+  <div id="modal-container">
+    <div v-if="isOpen">
+      <!-- Overlay -->
+      <div class="overlay" @click="toggleModal">
 
-          <!-- Modal -->
-          <div class="modal" @click.stop>
-            <!-- Media container -->
-            <div class="video-container">
+        <!-- Modal -->
+        <div class="modal" @click.stop>
+          <!-- Media container -->
+          <div class="video-container">
 
-              <!-- Tabs -->
-              <div class="video-tabs">
-                <!-- Toggle visibility button -->
-                <button @click="toggleModal">X</button>
-                <!-- Video tabs -->
-                <div v-for="(link, index) in modalData.links" :key="index" class="tab">
-                  <input type="radio" :id="'t' + index" name="tab-group" :checked="index==0">
-                  <label :for="'t' + index" class="tab">{{index + 1}}</label>
-       
-                  <div class="video-content">
-                    <div v-html="link"></div>
-                  </div> 
-                </div>
-                <!-- Tutorial tab -->
-                <div class="tab">
-                  <input type="radio" id="tutorial-tab" name="tab-group">
-                  <label for="tutorial-tab" class="tutorial-label">Tutorial</label>
-       
-                  <div class="video-content">
-                    <p>Coming soon!</p>
-                  </div>
+            <!-- Tabs -->
+            <div class="video-tabs">
+              <!-- Toggle visibility button -->
+              <button @click="toggleModal">X</button>
+              <!-- Video tabs -->
+              <div v-for="(link, index) in modalData.links" :key="index" class="tab">
+                <input type="radio" :id="'t' + index" name="tab-group" :checked="index==0">
+                <label :for="'t' + index" class="tab">{{index + 1}}</label>
+      
+                <div class="video-content">
+                  <div v-html="link"></div>
+                </div> 
+              </div>
+              <!-- Tutorial tab -->
+              <div class="tab">
+                <input type="radio" id="tutorial-tab" name="tab-group">
+                <label for="tutorial-tab" class="tutorial-label">Tutorial</label>
+      
+                <div class="video-content">
+                  <p>Coming soon!</p>
                 </div>
               </div>
             </div>
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <!-- {{ modalData.description }} -->
-            </div>
-
           </div>
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <!-- {{ modalData.description }} -->
+          </div>
+
         </div>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -66,32 +64,20 @@ export default {
 .modal {
   width: 680px;
   height: 480px;
-  margin: 0px auto;
   padding: 20px;
-  background-color: #222831;
+  margin: 0px auto;
+  background-color: white;
+  color: #30475e;
   box-shadow: 0 1px 2px 2px;
-  transition: visibility 1s;
-  overflow-y: scroll;
-  overflow: hidden;
   border-radius: 5px;
-}
-.fadeIn-enter {
-  opacity: 0;
-}
-.fadeIn-leave-active {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.fadeIn-enter .modal,
-.fadeIn-leave-active.modal {
-  transform: scale(1.1);
+  overflow: hidden;
 }
 
 /* Tabs */
 .video-tabs {
-  color: white;
   position: relative;
-  min-height: 350px;
+  height: 500px;
+  width: 800px;
   clear: both;
 }
 .tab {
@@ -109,11 +95,10 @@ export default {
 }
 .tab label:hover {
   cursor: pointer;
-  background-color: #30475e;
 }
 .tutorial-label {
   display: inline-block;
-  width: 100px!important;
+  width: 100px;
 }
 .tab [type=radio] {
   display: none;   
@@ -125,11 +110,12 @@ export default {
   right: 0;
   bottom: 0;
   padding: 20px;
-  background: #222831;
+  background: white;
 }
 [type=radio]:checked ~ label {
   z-index: 20;
-  background-color: #30475e;
+  border-color: #f05454;
+  color: #f05454;
 }
 [type=radio]:checked ~ label ~ .video-content {
   z-index: 1;
@@ -140,16 +126,15 @@ button {
   position: absolute;
   padding: 7px;
   margin-top: 10px;
-  background-color: #222831;
+  background-color: white;
   border: 0px;
   border-radius: 5px;
-  color: white;
+  color: #30475e;
   left: 400px;
   outline: none;
 }
 button:hover {
   cursor: pointer;
-  background-color: #30475e;
   color: #f05454;
 }
 
@@ -163,7 +148,25 @@ button:hover {
   align-items: center;
   width: 100%;
   height: 100%;
-  background: #00000094;
+  background: #00000050;
   z-index: 100;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  .modal {
+    width: 80%;
+  }
+  .video-tabs {
+    padding-top: 8px;
+  }
+  .tab label {
+    margin: 5px;
+    padding: 0px 5px 0px 5px;
+  }
+  button {
+    left: 250px;
+  }
 }
 </style>

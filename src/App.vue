@@ -9,10 +9,13 @@
       id="sidebar"
       :filterOptions="filterOptions"
       :activeHand="handedness"
+      :class="{closed: hideSidebar}"
       @change-handedness="changeHandedness"/>
     <Table
       id="table"
-      :tableData="filteredDeceptionData" />
+      :tableData="filteredDeceptionData"
+      :class="{open: !hideSidebar}"
+      @toggle-sidebar="toggleSidebar" />
   </div>
 </template>
 
@@ -39,6 +42,7 @@ export default {
   data() {
     return {
       state: store.state,
+      hideSidebar: window.innerWidth <= 600,
       deceptionDataL: jsonLeft,
       deceptionDataR: jsonRight,
       handedness: "R",
@@ -61,6 +65,9 @@ export default {
       if (this.handedness !== newHandedness) {
         this.handedness = newHandedness;
       } 
+    },
+    toggleSidebar: function() {
+      this.hideSidebar === true ? this.hideSidebar = false : this.hideSidebar = true;
     },
     getDeceptionDataByHandedness: function() {
       if (this.handedness === "L") {
@@ -121,7 +128,7 @@ export default {
 .main-bg-img {
   background-repeat: no-repeat;
   width: 1500px;
-  opacity: 0.3;
+  opacity: 0.1;
   position: absolute;
   right: 0;
 }
@@ -146,5 +153,22 @@ p {
 }
 .test {
   margin-left: 400px;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  #app {
+    overflow-x: hidden;
+  }
+  #table {
+    margin-left: 30px;
+  }
+  .closed {
+    display: none;
+  }
+  .open {
+    padding-left: 300px;
+  }
 }
 </style>
