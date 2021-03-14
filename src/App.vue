@@ -158,9 +158,9 @@ p {
 
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
-  #app {
+  /* #app {
     overflow-x: hidden;
-  }
+  } */
   #table {
     margin-left: 30px;
   }
