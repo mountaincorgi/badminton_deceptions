@@ -128,7 +128,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 .main-bg-img {
   background-repeat: no-repeat;
-  width: 1500px;
+  width: 1280px;
   opacity: 0.1;
   position: absolute;
   right: 0;

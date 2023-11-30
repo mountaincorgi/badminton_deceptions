@@ -54,7 +54,7 @@ export default {
     color: #f05454;
 }
 .title-card {
-    background-color: rgba(255, 255, 255, 0.938);
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
     z-index: 3;
     left: 18px;
