@@ -10,9 +10,6 @@ Small web app created using Vue.js about deceptions in badminton.
 **Open modal:**
 ![deceptions_detail](https://github.com/mountaincorgi/badminton_deceptions/assets/42386631/dd87c274-7d66-4de0-aa95-7ed468c79647)
 
-**Filters:**
-![deceptions_filters](https://github.com/mountaincorgi/badminton_deceptions/assets/42386631/3cbd0173-ccf8-477a-a5e1-d49cb91a8be0)
-
 ## Project setup
 
 ```
