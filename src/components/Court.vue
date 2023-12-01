@@ -62,8 +62,9 @@
         <!-- Legend -->
         <ul class="legend">
             <li><i class="ci material-icons from">label</i> Player</li>
-            <li><i class="ci material-icons expected">label</i> Expected</li>
-            <li><i class="ci material-icons actual">label</i><span> Actual</span></li>
+            <!-- TODO: mistake! Switch these around -->
+            <li><i class="ci material-icons actual">label</i> Expected Shot</li>
+            <li><i class="ci material-icons expected">label</i><span> Actual Shot</span></li>
         </ul>
         </div>
     </div>
